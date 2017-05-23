@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="fileinput.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="fileinput.min.js"></script>
+    <script type="text/javascript" src="fileinput_locale_zh.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+<div class="form-group">
+			<label class="col-sm-2 control-label">图片上传:</label>
+	    	<div class="col-sm-4">
+	       		<input id="file" name="myfile" type="file" data-show-caption="true">
+	       		<p class="help-block">支持apk文件 文件大小不超过100M</p>
+	    	</div>
+	    </div>
+
+<script>
+function initFileInput(ctrlName,uploadUrl){   
+	    var control = $('#' + ctrlName); 
+	    control.fileinput({
+	        language: 'zh', //设置语言
+	        uploadUrl: "http://10.13.40.55/file/upload",  //上传地址
+	        showUpload: false, //是否显示上传按钮
+	        showRemove: true,
+			showPreview: false,
+	         dropZoneEnabled: false,
+	        showCaption: true,//是否显示标题
+	        //allowedPreviewTypes: ['object'],
+                allowedFileTypes: ['object'],
+                allowedFileExtensions:  ['css'],
+                maxFileSize: 2000000000,
+           	maxFileCount: 1,
+            //initialPreview: [ 
+            		//预览图片的设置
+              //      "<img src='http://127.0.0.1:8080/NewsManageSys/plugin/umeditor1_2_2/jsp/upload/20161030/55061                       477813913474.jpg' class='file-preview-image' alt='肖像图片' title='肖像图片'>",
+            //],
+	        
+	    }).on("filebatchselected", function(event, files) {
+            $(this).fileinput("upload");
+        	})
+        	.on("fileuploaded", function(event, data) {
+        		$("#path").attr("value",data.response);
+    	});
+	}
+	
+	$(function () {
+		var path="${base}/admin/product/upload.htm";
+		initFileInput("file",path);
+		
+	})
+</script>
+</body>
+</html>

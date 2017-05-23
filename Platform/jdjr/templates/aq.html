@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>京东金融</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./static/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon"> 
+    
+    
+    <link href="./static/css/font-awesome.css" rel="stylesheet" />
+    
+    <link href="./static/css/adminia.css" rel="stylesheet" /> 
+    <link href="./static/css/adminia-responsive.css" rel="stylesheet" /> 
+    
+    
+    <link href="./static/css/pages/faq.css" rel="stylesheet" /> 
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+	
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 				
+			</a>
+			
+			<a class="brand" href="./index"><font face="微软雅黑">研发测试部   测试集</a>
+			
+			<div class="nav-collapse">
+			
+				<ul class="nav pull-right">
+					
+					<li class="divider-vertical"></li>
+					
+					<li class="dropdown">
+						
+						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
+							安全退出 <b class="caret"></b>							
+						</a>
+						
+						<ul class="dropdown-menu">
+							
+							
+							<li>
+								<a href="./login"><i class="icon-off"></i> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div> <!-- /nav-collapse -->
+			
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+
+
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+
+<div id="content">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span3">
+				
+				<div class="account-container">
+				
+					<div class="account-avatar">
+						<img src="./static/img/headshot.png" alt="" class="thumbnail" />
+					</div> 
+				
+					<div class="account-details">
+					
+						<span class="account-name">你好，欢迎~</span>
+						
+						<span class="account-role">{{fullname}}</span>
+					
+					</div>
+				
+				</div> 
+				
+				<hr />
+				
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+					
+					
+					<li>
+						<a href="./account">
+							<i class="icon-signal"></i>
+							工具集合							
+						</a>
+					</li>
+					
+					<!-- <li class="active">
+						<a href="./aq">
+							<i class="icon-pushpin"></i>
+							联调问题与解决方案
+						</a>
+					</li> -->
+					
+					<li>
+						<a href="./monkey">
+							<i class="icon-th-list"></i>
+							移动端自动化		
+						</a>
+					</li>
+					
+					<li>
+						<a href="./reqjson">
+							<i class="icon-th-large"></i>
+							接口测试工具
+							<!-- <span class="label label-warning pull-right">5</span> -->
+						</a>
+					</li>
+					
+					<li>
+						<a href="./grid">
+							<i class="icon-th-large"></i>
+							压测工具	
+						</a>
+					</li>
+					
+					<!--<li>
+						<a href="./account">
+							<i class="icon-user"></i>
+							mock测试							
+						</a>
+					</li>-->
+					
+					<li>
+						<a href="./index">
+							<i class="icon-home"></i>
+							分享技术贴
+						</a>
+					</li>
+					
+				</ul>	
+				
+				
+				
+				
+				<!-- <div class="sidebar-extra">
+					<p><font style='font-family:Microsoft YaHei'/>如有问题请联系咚咚：liangdongdong</font></p>
+				</div>  -->
+				
+				<br />
+		
+			</div> <!-- /span3 -->
+			
+			
+			
+			<div class="span9">
+				
+				<h1 class="page-title">
+					<i class="icon-pushpin"></i>
+					联调汇总					
+				</h1>
+				
+				<div class="widget">
+														
+					<div class="widget-content">
+						
+						<h3>查询.</h3>
+						<ol class="faq-list">
+							
+							<li>
+									<h4 >交易风控-如果中了规则后想关闭对应的规则，怎么办?</h4>
+									<p>首先打开地址 <a href = "http://172.25.62.234:8088/index" target="_blank">http://172.25.62.234:8088/index</a><br/>
+									   可选择对应的环境：功能 or 闭环, 先进入lagonda进入，选择中规的时间范围，点击搜索。从查询的日志中查找，中规的关键字是rule hit 后面携带rule_name:的值(确认对应的riskId)。复制下来(如没有搜索到，可到bora，vanquish查询)<br />
+									   访问<a href = "http://172.25.62.234/m_rule" target="_blank">http://172.25.62.234/m_rule</a> 在规则列表里找到刚才复制的规则号，选择开启关闭。（注意：这里Key值保密，Key直接找李慧真要），点击提交即可</p>	
+							</li>
+							
+							<li>
+									<h4>交易风控-已知场景号，开启或关闭规则?</h4>
+									<p>访问<a href = "http://172.25.62.234/m_rule" target="_blank">http://172.25.62.234/m_rule</a> 在规则中查看对应 场景号 点击提交即可(成功或者失败可在返回结果里提示).</p>	
+									
+							</li>
+							
+							<li>
+								
+									<h4>交易风控-自助查询测试环境日志信息?</h4>
+									<p>打开<a href = "http://172.25.62.234:8088/index" target="_blank">http://172.25.62.234:8088/index</a>地址，找到对应的应用名即可.</p>	
+							</li>
+							
+							<li>
+									<h4>交易风控-上游业务联调入库情况如何自助查询？</h4>
+									<p>直接输入<a href = "http://172.25.62.234/inputSql" target="_blank">http://172.25.62.234/inputSql</a>.进入后选择对应的测试环境，选择对应的库，输入SQL语句即可查询入库情况</p>	
+									
+							</li>
+							
+							<li>
+									<h4>交易风控-设备指纹信息采集测试服务入口？</h4>
+									<p>直接访问地址<a href = "http://172.25.62.234/payrisk" target="_blank">http://172.25.62.234/payrisk</a>输入对应的erp账号即可提供测试设备信息</p>	
+									
+							</li>
+							
+							<li>
+									<h4>交易风控-如何对应的请求comm_jeep网关数据？</h4>
+									<p>输入网址<a href = "http://i.cbpmgt.com/" target="_blank">http://i.cbpmgt.com/</a>登录日志平台，在筛选框内输入对应的应用名称 例如：comm_jeep 搜索对应的场景号，获取到请求串后，可以通过<a href = "http://172.25.62.234/fk_request" target="_blank">http://172.25.62.234/fk_request</a>内部工具进行接口调用请求到对应的应用</p>	
+									
+							</li>
+							
+							<li>
+									<h4>交易风控-风控老运营平台访问地址</h4>
+									<p>老功能：http://172.24.5.186  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如需访问请咚咚联系liangdongdong<br />
+									老闭环：http://172.24.4.19<br />
+									老预发：http://172.23.86.42<br /><br />
+									
+									新功能：http://172.24.5.51:9090<br />
+									新闭环：http://172.24.4.133<br />
+									新预发：http://boss-pre.cbpmgt.com</p>	
+									
+							</li>
+							
+						</ol>
+										
+					</div> <!-- /widget-content -->
+					
+				</div> <!-- /widget -->
+				
+				
+				
+			</div> <!-- /span9 -->
+			
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /content -->
+					
+	
+<div id="footer" >
+	
+	<div class="container">				
+		<hr />
+		© 2017 Test platform 京东金融 - Test PlatForm 个人业务综合研发部
+	</div> <!-- /container -->
+	
+</div> <!-- /footer -->
+
+
+    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./static/js/jquery-1.7.2.min.js"></script>
+<script src="./static/js/bootstrap.js"></script>
+<script src="./static/js/faq.js"></script>
+
+<script>
+
+$(function () {
+	
+	$('.faq-list').goFaq ();
+	
+});
+
+</script>
+
+  </body>
+</html>
