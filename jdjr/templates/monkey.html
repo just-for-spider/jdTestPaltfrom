@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>京东金融</title>
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />     -->
+	
+	<!--fileupload  上传apk需要的file-->
+	
+	<link rel="stylesheet" href="./static/css/pages/bootstrap.min.css">
+    <link href="./static/css/fileinput.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/fileinput.js"></script>
+    <script type="text/javascript" src="./static/js/fileinput_locale_zh.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    
+	
+	
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./static/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon"> 
+    
+    
+    <link href="./static/css/font-awesome.css" rel="stylesheet" />
+    <link href="./static/css/adminia.css" rel="stylesheet" /> 
+    <link href="./static/css/adminia-responsive.css" rel="stylesheet" />
+	<link href="./static/css/pagination.css" rel="stylesheet"/>
+	<script type="text/javascript" src="./static/js/jsf.js"></script>
+    <link href="./static/css/pages/plans.css" rel="stylesheet" /> 
+	<link rel="stylesheet" href="./static/css/ladda.min.css">
+	
+	<!--  按钮开关-->
+	<script type="text/javascript" src="./static/js/swich/main.js"></script>
+	<script type="text/javascript" src="./static/js/swich/bootstrap-switch.js"></script>
+	<script type="text/javascript" src="./static/js/swich/highlight.js"></script>
+	<link href="./static/css/swich/highlight.css" rel="stylesheet" />
+	<link href="./static/css/swich/bootstrap-switch.css" rel="stylesheet" />
+	
+	<link href="./static/css/adminia.css" rel="stylesheet" />
+	
+	<!--  confirm提示框 -->
+	<!-- <script src="./static/js/confirm/jquery-1.11.3.min.js"></script> -->
+    <script type="text/javascript" src="./static/js/confirm/confirm.js"></script>
+
+
+
+<body>
+	
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 				
+			</a>
+			
+			<a class="brand" href="./index"><font face="微软雅黑">个人业务综合研发部   测试集</a>
+			
+			<div class="nav-collapse">
+			
+				<ul class="nav pull-right">
+					
+					<li class="divider-vertical"></li>
+					
+					<li class="dropdown">
+						
+						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
+							安全退出 <b class="caret"></b>							
+						</a>
+						
+						<ul class="dropdown-menu">
+							
+							
+							<li>
+								<a href="./login"><i class="icon-off"></i> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div> <!-- /nav-collapse -->
+			
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+
+
+
+
+<div id="content">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span3">
+				
+				<div class="account-container">
+				
+					<div class="account-avatar">
+						<img src="./static/img/headshot.png" alt="" class="thumbnail" />
+					</div> 
+				
+					<div class="account-details">
+					
+						<span class="account-name">你好，欢迎~</span>
+						
+						<span class="account-role">{{fullname}}</span>
+						
+					</div>
+					
+				</div> 
+				
+				<hr />
+				
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+					
+					
+					<li>
+						<a href="./account">
+							<i class="icon-signal"></i>
+							工具集合	
+						</a>
+					</li>
+					
+					<!-- <li>
+						<a href="./aq">
+							<i class="icon-pushpin"></i>
+							联调问题与解决方案
+						</a>
+					</li> -->
+					
+					<li  class="active">
+						<a href="./monkey">
+							<i class="icon-th-list"></i>
+							移动端自动化		
+						</a>
+					</li>
+					
+					<li>
+						<a href="./reqjson">
+							<i class="icon-th-large"></i>
+							接口测试工具
+						</a>
+					</li>
+					
+					<li>
+						<a href="./grid">
+							<i class="icon-th-large"></i>
+							压测工具
+						</a>
+					</li>
+					
+					<!--<li>
+						<a href="./mockservice">
+							<i class="icon-user"></i>
+							mock测试							
+						</a>
+					</li>-->
+					
+					<li>
+						<a href="./index">
+							<i class="icon-home"></i>
+							分享技术贴 		
+						</a>
+					</li>
+					
+				</ul>	
+				
+				<hr />
+				
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+				
+				<li>
+						<a href="http://10.13.16.203:5000" target="_blank">
+							<i class="icon-cog"></i>
+							系统类 - 浏览器访问 Linux 终端 		
+						</a>
+					</li>
+				
+				<li>
+						<a href="http://172.25.33.145/" target="_blank">
+							<i class="icon-cog"></i>
+							系统类 - 浏览器兼容性测试平台 		
+						</a>
+					</li>
+				
+				<li>
+						<a href="http://172.25.62.234:8088/index" target="_blank">
+							<i class="icon-cog"></i>
+							系统类 - 交易风控测试环境 		
+						</a>
+					</li>
+					
+				</ul>
+				
+				
+
+				
+				<!-- <div class="sidebar-extra">
+					<p><font style='font-family:Microsoft YaHei'/>如有问题请联系咚咚：liangdongdong</font></p>
+				</div>  -->
+				
+				<br />
+		
+			</div> <!-- /span3 -->
+			
+			
+			
+			<div class="span9">
+				
+				<h1 class="page-title">
+					<i class="icon-th-list"></i>
+					移动端解决方案					
+				</h1>
+				
+				
+				
+				
+				
+				
+				<div class="widget">
+				
+				
+				
+				<div class="widget">
+							
+							<div class="widget-header">
+								<h3>安卓端自动化</h3>
+							</div> <!-- /widget-header -->
+									
+							<div class="widget-content">
+								
+								
+								
+						<div class="tabbable">
+						<ul class="nav nav-tabs">
+						  <li class="active">
+							<li class="active"><a href="#1" data-toggle="tab"><i class="icon-upload" style="font-size:20px;color:green;"></i><b>上传及下载</b></a></li>
+						    <li><a href="#2" data-toggle="tab"><i class="icon-eye-open" style="font-size:20px;color:green;"></i><b>深度兼容测试</b></a></li>
+							<li><a href="#3" data-toggle="tab"><i class="icon-search" style="font-size:20px;color:green;"></i><b>app内存泄漏检测</b></a></li>
+						  <li><a href="#4" data-toggle="tab"><i class="icon-retweet" style="font-size:20px;color:green;"></i><b>android稳定性测试</b></a></li>
+						  <li><a href="#5" data-toggle="tab"><i class="icon-fire" style="font-size:20px;color:green;"></i><b>自动化测试</b></a></li>
+						  
+						</ul>
+						
+						<br />
+						
+							<div class="tab-content">
+								<div class="tab-pane" id="4">
+								
+								<fieldset>
+							<div class="control-group">
+									<label class="control-label"  style="color:rgb(158, 157, 157);"><i class="icon-exclamation-sign" style="font-size:20px;color:red;"></i><b>&nbsp;测试说明:   由于某些apps存在登录限制，为了大家的账号安全，需要打个免登陆app包上传，以及包内需要注释掉退出按钮. 友情提示一般做免登陆可在app内写死账号密码, build完成后上传即可测试</b></label> 
+									<br>
+									<label class="control-label"><i class="icon-ok-sign"></i>&nbsp;选择安装包:</label> 
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="package_id_2" id="package_id_2">
+													{%for k in packageInfo%}
+														<option value ={{k[0]}}>{{k[1]}}</option>
+													{%endfor%}
+												</select>
+										</div> 	
+									<br>
+									<label class="control-label"><i class="icon-ok-sign"></i>&nbsp;可执行:</label>									
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="execut_phone_id_2" id="execut_phone_id_2">
+													{%for s in managephoneInfo%}
+														<option value ={{s[0]}}>{{s[1]}}</option>
+													{%endfor%}
+												</select>
+										</div> 
+									
+									<br>
+									<div id="add_omm_task" name="add_omm_task" style="font-weight:bold;color:red"></div>
+									<div class="form-actions">
+										<button id="save-button-crash" type="submit" class="btn btn-primary">生成任务</button>&nbsp; &nbsp; &nbsp; &nbsp; 
+									 </div>
+									 
+									 
+									 
+									 <div class="widget-header">
+										<i class="icon-th-list"></i>
+											<h3>稳定性测试任务列表</h3>
+									 </div> <!-- /widget-header -->
+						<div id="flsh_list_two" name="flsh_list_two" >			
+							<table class="table table-striped table-bordered">
+							<thead >
+								<tr>
+									<th>包名</th>
+									<th>机器型号</th>
+									<th>检测异常</th>
+									<th>任务状态</th>
+									<th>下载日志</th>
+								</tr>
+							</thead>
+							
+							<tbody>
+								{%for i in random_task_total_info%}
+								<tr>
+									<td>{{i[5]}}</td>
+									<td>{{i[3]}}</td>
+									<!-- <td style="color:red;font-weight:bold;">{{i[8]}}个问题</td> -->
+									{%if i[8] == '0'%}
+										<td style="color:Green;font-weight:bold;">恭喜,无异常问题</td>
+									{%elif i[8] > '0'%}
+										<td style="color:red;font-weight:bold;">{{i[8]}}个问题</td>
+									{%else%}
+										<td><!-- <B><font color="red">安装失败</B> --></td>
+									{%endif%}
+									
+									<!--判断执行状态-->
+									{%if i[1]=='0'%}
+										<td><B><font color="#808080">等待执行..</B></td>
+									{%elif i[1]=='1'%}
+										<td><B><font color="#9F5F9F">执行中...</B></td>
+									{%elif i[1]=='2'%}
+										<td><B><font color="#D58A8A">执行完成</B></td>
+									{%elif i[1]=='3'%}
+										<td><B><font color="red">异常停止</B></td>
+									{%endif%}
+
+									{%if i[6] != ""%}
+										<td class="action-td">
+											<a href="./static/android_apk/logs/{{i[6]}}" class="btn btn-small btn-warning">
+												<i class="icon-ok"></i>								
+											</a>					
+										</td>
+									{%else%}
+										<td class="action-td">
+										</td>
+									{%endif%}
+									
+								</tr>
+								{%endfor%}
+							</tbody>
+						 </table>
+						</div>				
+						</div> 
+					</fieldset>			
+				</div>
+								
+								
+								
+								
+						<!--        移动端深度测试模块        -->
+						<div class="tab-pane" id="2">
+							<fieldset>
+								<label class="control-label" for="check_package_name"><i class="icon-ok-sign" style="font-size:18px;color:red"></i>&nbsp;<b>选择安装包:</b></label>
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="check_package_name" id="check_package_name">
+													{%for k in packageInfo%}
+														<option value ={{k[0]}}>{{k[1]}}</option>
+													{%endfor%}
+												</select>
+										</div> 
+									<br/>
+								<label class="control-label" for="package_name"><i class="icon-ok-sign" style="font-size:18px;color:red"></i>&nbsp;<b>可测试机型展示:</b></label>
+								
+								
+
+								{%for k in managephoneInfo%}
+								
+									<img src="{{k[4]}}" class="tooltip-test" data-toggle="tooltip" title="{{k[1]}}" style="cursor:pointer">
+								{%endfor%}
+
+
+                                <br />
+								<br />
+								<label class="control-label" for="package_name"><i class="icon-ok-sign" style="font-size:18px;color:red"></i>&nbsp;<b>定制化兼容测试:</b></label>
+									<div class="switch" data-on="primary" data-off="info">
+										<input type="checkbox" id="check_Resource" name="check_resource" data-on-text="资源暂未开放" data-off-text="关闭" data-on-color="danger" disabled="true" checked />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<input type="checkbox" id="check_install" name="check_install" data-on-text="批量安装卸载" data-off-text="关闭"  data-on-color="warning"    value="1" checked />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<input type="checkbox" id="check_startservice" name="check_startservice" data-on-text="订制未开放" data-off-text="关闭" data-on-color="info" value="1"  disabled="true" checked />
+										<br/>
+										<br/>
+										<input type="checkbox" name="check_Flow" data-on-text="流量暂未开放" data-off-text="关闭"  disabled="true" checked />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										
+										<input type="checkbox" name="check_Electricity" data-on-text="电量暂未开放" data-off-text="关闭" disabled="true" checked />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										
+										<input type="checkbox" name="check_Electricity" data-on-text="安全暂未开放" data-off-text="关闭" disabled="true" checked />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										
+									</div>
+									
+									<!-- <button id="check_list" type="submit" class="btn btn-primary" onclick="response_checkOOM_task()">生成任务</button>&nbsp; &nbsp; &nbsp; &nbsp;  -->
+									<br>
+									<br> <!-- onclick="response_checkBestTest()" -->
+									<button id="save-button" type="submit" class="btn btn-primary btn-lg btn-block" style="width:20%;height:25px;"><b>生成任务</b></button>
+										<br>
+											<br>
+												<br>
+										<br>
+									
+									
+									<div class="widget-header">
+										<i class="icon-th-list"></i>
+											<h3>深度检测任务列表</h3>
+									 </div> <!-- /widget-header -->
+									<div id="flsh_list_three" name="flsh_list_three">
+									<table class="table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>包名</th>
+											<th>检测类型</th>
+											<th>任务状态</th>
+											<th>检测报告</th>
+										</tr>
+									</thead>
+							
+								<tbody>
+								
+								<!--判断执行的种类-->
+								{%for case in depth%}
+									<tr>
+									<td>{{case[10]}}</td>
+									{%if case[7]=="1"%}
+										{%if case[8]=="1"%}
+											<td>批量安装卸载|批量启动检测</td>
+										{%elif case[8]=="2"%}
+											<td>批量安装启动卸载</td>
+										{%endif%}
+
+									{%elif case[7]=="2"%}
+										{%if case[8]=="1"%}
+											<td>批量启动检测</td>
+										{%elif case[8]=="2"%}
+											<td style="color:red"><b>异常任务</b></td>
+										{%endif%}
+									{%else%}
+										<td>数据异常</td>
+									{%endif%}
+									
+									
+									
+									<!--判断执行状态-->
+									{%if case[3]=='0'%}
+										<td><B><font color="#808080">等待执行..</B></td>
+									{%elif case[3]=='1'%}
+										<td><B><font color="#9F5F9F">执行中...</B></td>
+									{%elif case[3]=='2'%}
+										<td><B><font color="#D58A8A">执行完成</B></td>
+									{%elif case[3]=='3'%}
+										<td><B><font color="red">异常停止</B></td>
+									{%elif case[3]=='4'%}
+										<td><B><font color="red">安装失败</B></td>
+									{%elif case[3]=='5'%}
+										<td><B><font color="red">未开启监测任务,请开启</B></td>	
+									{%endif%}
+									
+									{%if case[4] != ""%}
+										<td>
+											<a href="./static/android_apk/report/{{case[4]}}" target="_blank">
+                                                </i><b style="color:green">测试报告</b>
+											</a>					
+										</td>
+									{%else%}
+										<td></td>
+										
+									{%endif%}
+									</tr>
+								{%endfor%}
+								
+								</tbody>
+							</table>
+						</div>
+									
+								
+									
+								
+							</fieldset>
+						</div>
+						
+						
+						
+						
+						
+						<div class="tab-pane" id="3">
+							<fieldset>
+							<div class="control-group">
+									<label class="control-label" for="package_name" style="color:rgb(158, 157, 157);"><i class="icon-exclamation-sign" style="font-size:20px;color:red;"></i><b>&nbsp;测试说明:   由于某些apps存在登录限制，为了大家的账号安全，需要打个免登陆app包上传，以及包内需要注释掉退出按钮. 友情提示一般做免登陆可在app内写死账号密码, build完成后上传即可测试</b></label> 
+									<br>
+									<label class="control-label" for="package_name"><i class="icon-ok-sign"></i>&nbsp;选择安装包:</label> 
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="package_id" id="package_id">
+													{%for k in packageInfo%}
+														<option value ={{k[0]}}>{{k[1]}}</option>
+													{%endfor%}
+												</select>
+										</div> 	
+									<br>
+									<label class="control-label" for="package_name"><i class="icon-ok-sign"></i>&nbsp;可执行:</label>									
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="execut_phone_id" id="execut_phone_id">
+													{%for s in managephoneInfo%}
+														<option value ={{s[0]}}>{{s[1]}}</option>
+													{%endfor%}
+												</select>
+										</div> 
+									
+									<br>
+									<div id="add_omm_task" name="add_omm_task" style="font-weight:bold;color:red"></div>
+									<div class="form-actions">
+										<button id ="save-button-OOM" type="submit" class="btn btn-primary">生成任务</button>&nbsp; &nbsp; &nbsp; &nbsp;
+									 </div>
+									 
+									 
+									 
+								<div class="widget-header">
+									<i class="icon-th-list"></i>
+											<h3>检测OOM任务列表</h3>
+									 </div> <!-- /widget-header -->
+										<div id="flsh_list" name="flsh_list">			
+											<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>包名</th>
+										<th>机器型号</th>
+										<th>检测异常</th>
+										<th>任务状态</th>
+										<th>下载日志</th>
+									</tr>
+								</thead>
+							
+								<tbody>
+									{%for i in task_total_info%}
+									<tr>
+										<td>{{i[5]}}</td>
+										<td>{{i[3]}}</td>
+										{%if i[8] == '0'%}
+											<td style="color:Green;font-weight:bold;">恭喜,无异常问题</td>
+										{%elif i[8] >'0'%}
+											<td style="color:red;font-weight:bold;">{{i[8]}}个问题</td>
+										{%else%}
+											<td><!-- <B><font color="red">安装失败</B> --></td>
+										{%endif%}
+									
+										<!--判断执行状态-->
+										{%if i[1]=='0'%}
+											<td><B><font color="#808080">等待执行..</B></td>
+										{%elif i[1]=='1'%}
+											<td><B><font color="#9F5F9F">执行中...</B></td>
+										{%elif i[1]=='2'%}
+											<td><B><font color="#D58A8A">执行完成</B></td>
+										{%elif i[1]=='3'%}
+											<td><B><font color="red">异常停止</B></td>
+										{%endif%}
+
+										{%if i[6] != ""%}
+											<td class="action-td">
+												<a href="./static/android_apk/logs/{{i[6]}}" class="btn btn-small btn-warning">
+													<i class="icon-ok"></i>								
+												</a>					
+											</td>
+										{%else%}
+											<td class="action-td">
+											</td>
+										{%endif%}
+									
+									</tr>
+									{%endfor%}
+
+								</tbody>
+						</table>
+						</div>
+										
+										
+								</div> 
+										
+								
+											
+										
+								
+							</fieldset>
+						</div>
+						
+						
+						<div class = "tab-pane" id = "5">
+							<fieldset>
+                                <div class = "control-group">
+									<label class = "control-label"><i class = "icon-ok-sign" style = "font-size:18px;color:red"></i>&nbsp;<b>选择安装包:</b></label>
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="auto_package_name" id="auto_package_name">
+													{%for k in packageInfo%}
+														<option value ={{k[0]}}>{{k[1]}}</option>
+													{%endfor%}
+												</select>
+										</div>
+								</div>
+
+
+
+
+                                    <label class="control-label" for="run_iphone"><b>&nbsp;可执行机:</b></label>
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="run_iphone" id="run_iphone">
+													{%for s in managephoneInfo%}
+														<option value ={{s[0]}}>{{s[1]}}</option>
+													{%endfor%}
+												</select>
+										</div>
+                                <br/>
+
+                                    <label class="control-label" for="auto_script"><b>&nbsp;选择自动化脚本:</b></label>
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="auto_script" id="auto_script">
+													{%for sp in script_total%}
+														<option value ={{sp[0]}}>{{sp[1]}}</option>
+													{%endfor%}
+												</select>
+										</div>
+                                <br/>
+
+
+{#                                <label class="control-label" for="accountusername" ><i class="icon-ok-sign" style="font-size:18px;color:green;"></i><b>&nbsp;输入执行的CASE：</b></label>#}
+{#												<div class="controls">#}
+{#													<input name="run_case_list" id="run_case_list"  type="text" style="height:20px;width:600px;font-family: Microsoft YaHei;font-size:15px;" placeholder="规范:[文件名.类名('方法名1'),文件名.类名('方法名2')]"/>#}
+{#												</div>#}
+
+                                <div class="form-actions">
+										<button id="save-button-autoscript" type="submit" class="btn btn-primary">生成任务</button>&nbsp; &nbsp; &nbsp; &nbsp;
+									 </div>
+									 
+									 
+								
+								
+								<div class="widget-header">
+									<i class="icon-th-list"></i>
+											<h3>客户端自动化测试结果</h3>
+								</div> <!-- /widget-header -->
+								<div id = "flsh_script_list" name= "flsh_script_list">			
+								<table class="table table-striped table-bordered" id="idData">
+								<thead>
+									<tr>
+										<th>包名</th>
+										<th>机器型号</th>
+										<th>自动化脚本</th>
+										<th>任务状态</th>
+										<th>测试报告</th>
+									</tr>
+								</thead>
+							
+								<tbody>
+									{%for i in autolist%}
+									<tr>
+										<td>{{i[5]}}</td>
+										<td>{{i[3]}}</td>
+										<td>{{i[-2]}}</td>
+									
+										<!--判断执行状态-->
+										{%if i[1]=='0'%}
+											<td><B><font color="#808080">等待执行..</B></td>
+										{%elif i[1]=='1'%}
+											<td><B><font color="#9F5F9F">执行中...</B></td>
+										{%elif i[1]=='2'%}
+											<td><B><font color="#D58A8A">执行完成</B></td>
+										{%elif i[1]=='3'%}
+											<td><B><font color="red">异常停止</B></td>
+										{%endif%}
+
+										{%if i[6] != ""%}
+											<td>
+											    <a href="./static/android_apk/auto_report/{{i[6]}}" target="_blank">
+                                                    </i><b style="color:green">测试报告</b>
+											    </a>
+										    </td>
+										{%else%}
+											<td class="action-td">
+											</td>
+										{%endif%}
+									
+									</tr>
+									{%endfor%}
+
+								</tbody>
+						</table>
+						
+						<table width="60%" align="right">
+							<tr><td><div id="barcon" name="barcon"></div></td></tr>
+						</table>
+						</div>
+								
+								
+								
+								
+
+
+{#                                <label class="col-sm-3 control-label"><i class="icon-ok-sign" style="color:red"></i>&nbsp;<b>上传脚本:</b></label>#}
+{#										<div class="col-sm-4">#}
+{#											<input id="file_py" name="file" type="file" data-show-caption="true">#}
+{#											<p class="help-block">请上传py后缀的脚本</p>#}
+{#										</div>#}
+{##}
+{#                                        <br/>#}
+{#                                        <div class="col-sm-4">#}
+{#                                            <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">脚本范例</button>#}
+{#                                            </div>#}
+							</fieldset>
+						</div>
+								
+						
+						
+						
+						<div class="tab-pane active" id="1">
+							<fieldset>
+								<div class="form-group">								
+									
+									<div class="control-group">											
+									<label class="control-label" for="package_name"><i class="icon-ok-sign" style="font-size:18px;color:red"></i>&nbsp;<b>1.选择安装包:</b></label>
+										<div class="controls">
+												<select style="font-family:Microsoft YaHei;font-size:14px;font-weight:bold" name="package_name" id="package_name">
+													{%for k in packageInfo%}
+														<option value ={{k[1]}}>{{k[1]}}</option>
+													{%endfor%}
+												</select>
+										</div> 				
+								</div> 
+								
+								<div class="control-group">
+												<label class="control-label" for="accountadvanced">&nbsp;<b>获取自动化信息:</b></label>
+												<div class="controls">
+													<textarea cols="30" rows="5" name="response_param_iphoneinfo" id="response_param_iphoneinfo" style="font-family:Microsoft YaHei; height:300px; width:600px;" placeholder="请选择安装包，点击【获取信息】按钮可获取相关自动化信息 例如：packageName/首页activity"></textarea>
+												</div>
+											</div>
+										
+								
+											<button type="submit" class="btn btn-primary" onclick="response_iphone_info()">获取信息</button>&nbsp; &nbsp; &nbsp; &nbsp; 
+
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+
+                                    <label class="col-sm-3 control-label"><i class="icon-ok-sign" style="font-size:18px;color:red"></i>&nbsp;<b>2.上传脚本:</b></label>
+										<div class="col-sm-4">
+											
+											<input id= "file_py" name= "file_py" type="file" data-show-caption= "true">
+										</div>
+
+                                        <br/>
+                                        <div class="col-sm-4">
+
+                                            <p class="help-block">此功能上传自动化脚本，具体脚本要求见自动化测试</p>
+                                            <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">脚本范例</button>
+                                        </div>
+
+
+
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+
+
+
+
+
+									<br>
+									<br>
+									<label class="col-sm-3 control-label"><i class="icon-ok-sign" style="font-size:18px;color:red"></i>&nbsp;<b>3.上传安卓包:</b></label>
+										<div class="col-sm-4">
+											<input id="file" name="file" type="file" data-show-caption="true">
+											<p class="help-block">支持apk文件 文件大小不超过100M</p>
+										</div>
+									
+									</div>
+									
+									
+									
+								<br/><br/><br/><br/>
+						<div class="list-group">
+									<a class="list-group-item active">
+										<b>apk下载列表</b>
+									</a>
+
+									<div id="hiddenresult" style="display:none;">
+									{%for j in packageInfo%}
+										<div class="listid">
+											<a href="./static/android_apk/apk/{{j[1]}}" class="list-group-item">{{j[1]}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-download-alt" style="color:green"></i></a>
+										</div>
+									{%endfor%}
+									</div>
+									
+									<div id="Searchresult"></div>
+									<br>
+									<div id="Pagination" class="pagination1"></div>
+							</fieldset>
+						</div>
+						  
+					</div>	
+				
+
+				
+				<div class="widget">
+								
+			 </div> <!-- /widget -->
+			
+			</div> <!-- /span9 -->
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /content -->
+
+
+<input type="hidden" id="common_confirm_btn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#common_confirm_model">
+<div id="common_confirm_model" class="modal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> <span class="title"></span></h5>
+            </div>
+            <div class="modal-body small">
+                <p ><span class="message"></span></p>
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-primary ok" data-dismiss="modal">确认</button>
+                <button type="button" class="btn btn-default cancel" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					PY脚本样例
+				</h4>
+			</div>
+			<div class="modal-body">
+				# -*- coding: utf-8 -*-<br/>
+                '''<br/>
+                Created on 2017-1-10<br/>
+                @author: Administrator<br/>
+                '''<br/>
+				import sys   <br/>
+				import unittest  <br/>
+				import conf    #导入配置类<br/>
+                import initInfo  #导入封装类<br/>
+				import HTMLTestRunner #导入生成报告类<br/>
+				
+				
+
+
+                <b>class ContactsAndroidTests(initInfo.appTest):</b> #继承initInfo类<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>def testin_one(self): <b/> #名字可以任意修改<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、写case业务逻辑<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return: 0<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>def testin_two(self):</b><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、写case业务逻辑<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:return:0<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''<br/>
+				<b>if __name__ == '__main__':<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suite = unittest.TestSuite()<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suite.addTest(ContactsAndroidTests('testin_one'))  #需要修改部分：可以控制执行脚本的数量 类名.方法<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suite.addTest(ContactsAndroidTests('testin_two'))	 #需要修改部分：可以控制执行脚本的数量 类名.方法<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conf._initConf(suite) #触发配置<br />
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+
+	
+
+<script>
+    function test(){  
+        var nameValue=window.document.getElementById("packageName").value;  
+           if (nameValue == "") // 或者是!nameValue  
+            {  
+                window.alert("包名不能为空!");  
+                return false;  
+            } 
+        }  
+</script>
+
+
+<script>
+function check_file(){
+		var zswb = $("#file").val();
+		if(zswb.length>1 && zswb != ''){
+			var lodt = zswb.lastIndexOf(".");
+			var type = zswb.substring(lodt+1);
+			if(type != "apk"){
+				$("#zswbdiv").empty();
+				$("#zswbdiv").append("<div class='control-group'><font color='red'>上传的文件必须为apk安卓安装包！</font></div>");
+				return false;
+			}else{
+				$("#zswbdiv").empty();
+				return true;
+			}
+		}else{
+			$("#zswbdiv").empty();
+			$("#zswbdiv").append("<div class='control-group'><font color='red'>上传不能为空</font></div>");
+			return false;
+		}
+			return true;
+
+}
+
+</script>
+
+
+<script>
+function initFileInput(ctrlName){
+	    var control = $('#' + ctrlName);
+	    control.fileinput({
+	        language: 'zh', //设置语言
+	        uploadUrl: "upload",  //上传地址
+	        showUpload: false, //是否显示上传按钮
+	        showRemove: true,
+			showPreview: false,
+	         dropZoneEnabled: false,
+	        showCaption: true,//是否显示标题
+            allowedFileExtensions:  ['apk'],
+            maxFileSize: 1000000,
+           	maxFileCount: 1,
+
+	    }).on("filebatchselected", function(event, files) {
+            $(this).fileinput("upload");
+        	})
+        	.on("fileuploaded", function(event, data, previewId, index) {
+        		if(data.response.error == ''){
+					location.reload();
+					$(".help-block").html("亲,文件已上传成功~");
+				}else{
+					alert(data.response.error);
+					$(".help-block").html(data.response.error);
+				}
+    	})
+	}
+
+ 	$(function () {
+		initFileInput("file");
+
+	})
+</script>
+
+
+
+
+<script> <!-- 上传执行脚本  -->
+function initFileInput_py(ctrlName){
+	    var control = $('#' + ctrlName);
+	    control.fileinput({
+	        language: 'zh', //设置语言
+	        uploadUrl: "Supload",  //上传地址
+	        showUpload: false, //是否显示上传按钮
+	        showRemove: true,
+			showPreview: false,
+	         dropZoneEnabled: false,
+	        showCaption: true,//是否显示标题
+            allowedFileExtensions:  ['py'],
+            maxFileSize: 1000000,
+           	maxFileCount: 1,
+
+	    }).on("filebatchselected", function(event, files) {
+            $(this).fileinput("upload");
+        	})
+        	.on("fileuploaded", function(event, data, previewId, index) {
+        		if(data.response.error==''){
+					location.reload();
+					$(".help-block").html("亲,文件已上传成功~");
+				}else{
+					alert(data.response.error);
+					$(".help-block").html(data.response.error);
+				}
+    	})
+	}
+
+ 	$(function () {
+		initFileInput_py("file_py");
+
+	})
+</script>
+
+<script src="./static/js/spin.min.js"></script>
+<script src="./static/js/ladda.min.js"></script>
+<script type="text/javascript" src="./static/js/jquery.pagination.js"></script>
+
+<script>
+		// Bind normal buttons
+		Ladda.bind( '.button-demo button', { timeout: 2000 } );
+
+		// Bind progress buttons and simulate loading progress
+		Ladda.bind( '.progress-demo button', {
+			callback: function( instance ) {
+				var progress = 0;
+				var interval = setInterval( function() {
+					progress = Math.min( progress + Math.random() * 0.01, 1 );
+					instance.setProgress( progress );
+
+					if( progress === 1 ) {
+						instance.stop();
+						clearInterval( interval );
+					}
+				}, 200 );
+			}
+		} );
+	</script>
+
+<script type="text/javascript">
+$(function(){
+	var initPagination = function() {
+		var num_entries = $("#hiddenresult div.listid").length;
+		// 创建分页
+		$("#Pagination").pagination(num_entries, {
+			num_edge_entries: 1, //边缘页数
+			num_display_entries:4, //主体页数
+			callback: pageselectCallback,
+			items_per_page:6 //每页显示1项
+		});
+	 }();
+	 
+	function pageselectCallback(page_index, jq){
+		var page_size = 6;
+		var num_entries = $("#hiddenresult div.listid").length;
+		$("#Searchresult").empty();
+		for(var i=0;i<page_size;i++){
+			var index=page_index*page_size+i;
+			if(index<num_entries){
+				var new_content = $("#hiddenresult div.listid:eq("+index+")").clone();
+				$("#Searchresult").append(new_content); //装载对应分页的内容
+			}
+		}
+		return false;
+	}
+});
+</script>
+
+<script>
+var Common = {
+    confirm:function(params){
+        var model = $("#common_confirm_model");
+        model.find(".title").html("提示信息")
+        model.find(".message").html("请确认")
+
+        $("#common_confirm_btn").click()
+        //每次都将监听先关闭，防止多次监听发生，确保只有一次监听
+        model.find(".cancel").die("click")
+        model.find(".ok").die("click")
+
+        model.find(".ok").live("click",function(){
+           
+        })
+
+        model.find(".cancel").live("click",function(){
+            
+        })
+    }
+}
+</script>
+
+<script>
+$('[name="check_install"]').bootstrapSwitch({  
+        onText:"安装启动卸载",  
+        offText:"关闭",  
+        onColor:"success",  
+        offColor:"info",  
+        //size:"small",  
+        onSwitchChange:function(event,state){  
+            if(state==true){  
+                $(this).val("1");  
+            }else{  
+                $(this).val("2");  
+            }  
+        }  
+    })
+	
+$('[name="check_startservice"]').bootstrapSwitch({  
+        onText:"批量启动检测",  
+        offText:"关闭",  
+        onColor:"success",  
+        offColor:"info",  
+        //size:"small",  
+        onSwitchChange:function(event,state){  
+            if(state==true){  
+                $(this).val("1");  
+            }else{  
+                $(this).val("2");  
+            }  
+        }  
+    })  
+</script>
+
+
+<script>
+    $(function() {
+        Confirm.init('sm');
+		
+		//深度兼容性检测弹出框
+        $('#save-button').unbind();
+        $('#save-button').bind('click', function(e) {
+            e.preventDefault();
+            Confirm.show('测试研发部', '确认提交批量执行任务?', {
+                'Save': {
+                    'primary': false,
+                    'callback': function() {
+                        Confirm.show('测试研发部', '添加成功,见任务列表');
+						response_checkBestTest()
+						
+                    }
+                }
+            });
+        });
+		
+		
+		//检测OOM任务弹出框
+		$('#save-button-OOM').unbind();
+        $('#save-button-OOM').bind('click', function(e) {
+            e.preventDefault();
+            Confirm.show('测试研发部', '确认提交检测app内存泄漏任务?', {
+                'Save': {
+                    'primary': false,
+                    'callback': function() {
+                        Confirm.show('测试研发部', '添加成功,见任务列表');
+						response_checkOOM_task()
+						
+                    }
+                }
+            });
+        });
+		
+		//检测稳定性测试弹出框
+		$('#save-button-crash').unbind();
+        $('#save-button-crash').bind('click', function(e) {
+            e.preventDefault();
+            Confirm.show('测试研发部', '确认提交检测app稳定性任务?', {
+                'Save': {
+                    'primary': false,
+                    'callback': function() {
+                        Confirm.show('测试研发部', '添加成功,见任务列表');
+						response_checkcrash_task()
+						
+                    }
+                }
+            });
+        });
+	
+
+    //校验生成自动化脚本
+		$('#save-button-autoscript').unbind();
+        $('#save-button-autoscript').bind('click', function(e) {
+            e.preventDefault();
+            Confirm.show('测试研发部', '确认提交执行自动化任务?', {
+                'Save': {
+                    'primary': false,
+                    'callback': function() {
+{#						var $_input=$("#run_case_list");//获取input元素#}
+{#						if($_input.length>0){//先判断元素是否存在#}
+{#							if($_input.val()==''){#}
+{#								Confirm.show('测试研发部', 'Duang..请输入要执行的用例,格式请参照默认范本');#}
+{#								}else{#}
+{#								Confirm.show('测试研发部', '添加成功,见任务列表');#}
+{#								response_checkScriptTest()#}
+{#							}#}
+{#						}#}
+                        Confirm.show('测试研发部', '添加成功,见任务列表');
+						response_checkScriptTest()
+                    }
+                }
+            });
+        });
+	 });
+
+    </script>
+
+  </body>
+</html>

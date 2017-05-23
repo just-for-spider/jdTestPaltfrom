@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>京东金融</title>
+<meta name="description" content="json,格式化,高亮">
+<meta name="keywords" content="json,格式化,高亮">
+<script src="./static/js/c.js" type="text/javascript"></script>
+<link href="./static/css/s.css" type="text/css" rel="stylesheet"></link>
+
+<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon">
+<link href="./static/css/font-awesome.css" rel="stylesheet" />
+<link href="./static/css/adminia.css" rel="stylesheet" /> 
+<link href="./static/css/adminia-responsive.css" rel="stylesheet" /> 
+<link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./static/css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="./static/css/pages/faq.css" rel="stylesheet" /> 
+
+
+
+<script type="text/javascript" src="./static/js/jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./static/js/jqueryui/jquery-ui.css" />
+<script language=javascript type="text/javascript" src="./static/js/jqueryui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./static/js/jsf.js"></script>
+<script src="./static/js/faq.js"></script>
+
+
+<script src="./static/js/bootstrap.js"></script>    
+<link href="./static/css/pages/plans.css" rel="stylesheet" />
+<script>
+function checkpostfrom(){
+
+   		if(edit-profile2.interfaceName.value==""){
+			alert("请输入接口名~");
+			edit-profile2.interfaceName.focus();
+			return false;
+   		}
+		
+
+    	
+ 		if(edit-profile2.request_param.value==""){
+ 		       alert("请输入入参的数据~ 例子:{\"属性名称\":\"属性值\"}");
+ 		       edit-profile2.request_param.focus();
+ 		       return false;
+ 		}
+}
+</script>
+</head>
+<body>
+	
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 				
+			</a>
+			
+			<a class="brand" href="./index"><font face="微软雅黑">个人业务综合研发部   测试集</a>
+			
+			<div class="nav-collapse">
+			
+				<ul class="nav pull-right">
+					
+					<li class="divider-vertical"></li>
+					
+					<li class="dropdown">
+						
+						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
+							安全退出 <b class="caret"></b>							
+						</a>
+						
+						<ul class="dropdown-menu">
+							
+							
+							<li>
+								<a href="./login"><i class="icon-off"></i> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div> <!-- /nav-collapse -->
+			
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+
+
+
+
+<div id="content">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span3">
+				
+				<div class="account-container">
+				
+					<div class="account-avatar">
+						<img src="./static/img/headshot.png" alt="" class="thumbnail" />
+					</div>
+				
+					<div class="account-details">
+					
+						<span class="account-name">你好，欢迎~</span>
+						
+						<span class="account-role">{{fullname}}</span>
+					
+					</div> <!-- /account-details -->
+				
+				</div> <!-- /account-container -->
+				
+				<hr />
+				
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+					
+
+					<li class="active">
+						<a href="./account">
+							<i class="icon-signal"></i>
+							工具集合	
+						</a>
+					</li>
+					
+					<!-- <li>
+						<a href="./aq">
+							<i class="icon-pushpin"></i>
+							联调问题与解决方案
+						</a>
+					</li> -->
+					
+					<li>
+						<a href="./monkey">
+							<i class="icon-th-list"></i>
+							移动端自动化		
+						</a>
+					</li>
+					
+					<li>
+						<a href="./reqjson">
+							<i class="icon-th-large"></i>
+							接口测试工具
+							<!-- <span class="label label-warning pull-right">5</span> -->
+						</a>
+					</li>
+					
+					<li>
+						<a href="./grid">
+							<i class="icon-th-large"></i>
+							压测工具	
+							<!-- <span class="label label-warning pull-right">5</span> -->
+						</a>
+					</li>
+					
+					<!--<li>
+						<a href="./mockservice">
+							<i class="icon-user"></i>
+							mock测试
+						</a>
+					</li>-->
+					
+					<li>
+						<a href="./index">
+							<i class="icon-home"></i>
+							分享技术贴 		
+						</a>
+					</li>
+					
+				</ul>
+
+				<hr />
+
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+				
+				<li>
+						<a href="http://10.13.16.203:5000" target="_blank">
+							<i class="icon-cog"></i>
+							系统类 - 浏览器访问 Linux 终端 		
+						</a>
+					</li>
+				<li>
+						<a href="http://172.25.33.145/" target="_blank">
+							<i class="icon-cog"></i> 
+							系统类 - 浏览器兼容性测试平台 
+						</a> 
+					</li>
+				<li> 
+						<a href="http://172.25.62.234:8088/index" target="_blank">
+							<i class="icon-cog"></i>
+							系统类 - 交易风控测试环境 		
+						</a>
+					</li>
+				</ul>
+				
+				
+				
+				
+				<!-- <div class="sidebar-extra">
+					<p><font style='font-family:Microsoft YaHei'/>如有问题请联系咚咚：liangdongdong</font></p>
+				</div>  -->
+				
+				<br />
+		
+			</div> <!-- /span3 -->
+			
+			
+			
+			<div class="span9">
+				
+				<h1 class="page-title">
+					<i class="icon-signal"></i>
+					各条产品线业务工具					
+				</h1>
+				
+				
+				<div class="row">
+					
+					<div class="span9">
+				
+						<div class="widget">
+							
+							<div class="widget-header">
+								<h3>测试辅助工具</h3>
+							</div> <!-- /widget-header -->
+									
+							<div class="widget-content">
+								
+								
+								
+					<div class="tabbable">
+						<ul class="nav nav-tabs">
+						  <li class="active">
+						    <a href="#1" data-toggle="tab"><b>消费金融</b></a>
+						  </li>
+						  <li><a href="#2" data-toggle="tab"><b>风控</b></a></li>
+						  <li><a href="#3" data-toggle="tab"><b>保险理财</b></a></li>
+						</ul>
+						
+						<br />
+						
+							<div class="tab-content">
+								<div class="tab-pane active" id="1">
+									<fieldset>
+
+									<div class="container">
+       
+									<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234/cloud"  target="_blank" data-toggle="tooltip" data-placement="top" title="辅助工具查询以及删除"><i class="icon-list"></i>云缓存查询及删除</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/sendCoupon" target="_blank"><i class="icon-list"></i>一键发放优惠券</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/realName" target="_blank"><i class="icon-list"></i>白条实名</a></div>
+										</div>
+
+										<hr style="width:840px">
+									<div class="row-fluid">
+										<div class="span3"><a href="http://172.24.7.182:8004/couponSelect" target="_blank"><i class="icon-list"></i>白条优惠券查询</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/openAccount" target="_blank"><i class="icon-list"></i>白条开户</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/openSelect" target="_blank"><i class="icon-list"></i>白条开户查询</a></div>
+									</div>
+										<hr style="width:840px">
+									
+									<div class="row-fluid">
+										<div class="span3"><a href="http://172.24.7.182:8004/updateAmount" target="_blank"><i class="icon-list"></i>白条可用额度修改</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/updateStatus" target="_blank"><i class="icon-list"></i>白条状态变更</a></div>
+										<div class="span3"><a href="http://172.25.62.234/trancate" target="_blank"><i class="icon-list"></i>清空已使用额度</a></div>
+									</div>
+										<hr style="width:840px">
+											
+									<div class="row-fluid">
+										<div class="span3"><a href="http://172.24.7.182:8004/bindCard" target="_blank"><i class="icon-list"></i>卡中心绑卡第一步</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/bindCardSec" target="_blank"><i class="icon-list"></i>卡中心绑卡第二步</a></div>
+										<div class="span3"><a href="http://172.24.7.182:8004/bindCardThird" target="_blank"><i class="icon-list"></i>卡中心绑卡第三步</a></div>
+									</div>
+										<hr style="width:840px">	
+										
+									<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234/updateLoan" target="_blank"><i class="icon-list"></i>给特定单款单支付首付款</a></div>
+										<div class="span3"><a href="http://172.25.62.234/quickLoan" target="_blank"><i class="icon-list"></i>全球购给特定pin,下特定金额的订单</a></div>
+										<div class="span3"><a href="http://172.25.62.234/zc_quickLoan" target="_blank"><i class="icon-list"></i>众筹给特定pin下特定金额订单</a></div>
+									</div>
+										<hr style="width:840px">
+										
+									<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234/creditRefund" target="_blank"><i class="icon-list"></i>贷款单退款冲销特定的金额</a></div>
+										<div class="span3"><a href="http://172.25.62.234/syncUserStatus" target="_blank"><i class="icon-list"></i>白条+同步白条实名信息</a></div>
+										<div class="span3"><a href="http://trade.go.jd.com/test/receiveOrderInit" target="_blank"><i class="icon-list"></i>网关模式业务下单流程</a></div>
+									</div>
+										<hr style="width:840px">
+
+                                    <div class="row-fluid">
+										<div class="span3"><a href="http://172.25.35.225:8013/testController" target="_blank"><i class="icon-list"></i>实名同步</a></div>
+										<div class="span3"><a href="http://172.25.35.225:8013/autoRepayController" target="_blank"><i class="icon-list"></i>开通自动还款</a></div>
+										<div class="span3"><a href="http://172.25.35.225:8013/Refund" target="_blank"><i class="icon-list"></i>退款</a></div>
+									</div>
+										<hr style="width:840px">
+
+                                    <div class="row-fluid">
+										<div class="span3"><a href="http://172.25.35.225:8013/user/findOidByOrderId" target="_blank"><i class="icon-list"></i>查询商家订单号</a></div>
+										<div class="span3"><a href="http://172.25.35.225:8013/user/deleteByPin" target="_blank"><i class="icon-list"></i>删除用户逾期信息</a></div>
+										<div class="span3"><a href="http://172.25.35.225:8013/user/findByPin" target="_blank"><i class="icon-list"></i>通过京东pin查询白+用户</a></div>
+									</div>
+										<hr style="width:840px">
+											
+							</div>		
+										
+									</fieldset>
+								</div>
+								
+								
+								
+								
+								<div class="tab-pane" id="2">
+										<fieldset>
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234/inputSql" target="_blank"><i class="icon-leaf"></i>风控 联调入库查询</a></div>
+										<div class="span3"><a href="http://172.25.62.234/fk_request" target="_blank"><i class="icon-leaf"></i>模拟请求网关</a></div>
+										<div class="span3"><a href="http://172.25.62.234/payrisk" target="_blank"><i class="icon-leaf"></i>风控 设备指纹JS接入测试</a></div>
+										</div>
+										<hr>
+
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234/m_rule" target="_blank"><i class="icon-leaf"></i>交易风控规则开关</a></div>
+										<div class="span3"><a href="http://172.25.62.234:8088/index" target="_blank"><i class="icon-leaf"></i>测试环境日志系统</a></div>
+										<div class="span3"><a href="http://10.13.16.203:5000" target="_blank"><i class="icon-leaf"></i>远程连接服务器</a></div>
+										</div>
+										<hr>
+										
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.35.223:5000/randomcard" target="_blank"><i class="icon-leaf"></i> 生成身份证号</a></div>
+										<div class="span3"><a href="http://172.25.35.223:5000/randomphone" target="_blank"><i class="icon-leaf"></i>生成手机号</a></div>
+										<div class="span3"><a href="http://172.25.35.223:5000/riskstop" target="_blank"><i class="icon-leaf"></i>天盾拦截设置</a></div>
+										</div>
+										<hr>
+										
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.35.223:5000/risktest" target="_blank"><i class="icon-leaf"></i> 天盾加验设置</a></div>
+										</div>
+										<hr>
+														
+										</fieldset>
+								</div>
+								
+								
+								
+								
+								<div class="tab-pane" id="3">
+									<fieldset>
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234:8081/underwrite" target="_blank"><i class="icon-star"></i>理财一键核保</a></div>
+										<div class="span3"><a href="http://172.25.62.234:8081/issuePolicy" target="_blank"><i class="icon-star"></i>理财一键承保</a></div>
+										<div class="span3"><a href="http://172.25.62.234:8081/targetSales" target="_blank"><i class="icon-star"></i>信保 一键下单</a></div>
+										</div>
+										<hr>
+
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.25.62.234:8081/bwinorder" target="_blank"><i class="icon-star"></i>信保一键出单</a></div>
+										<div class="span3"><a href="http://172.25.62.234:8081/refCallback" target="_blank"><i class="icon-star"></i>理财代收代付回调</a></div>
+										<div class="span3"><a href="http://172.25.62.234:8081/tfFund" target="_blank"><i class="icon-star"></i>理财资金划拨通知</a></div>
+										</div>
+										<hr>
+										
+										<div class="row-fluid">
+										<div class="span3"><a href="http://172.24.7.198:8020/r2m/toR2mOperate" target="_blank"><i class="icon-star"></i>清缓存</a></div>
+										</div>
+										<hr>
+
+									</fieldset>
+							</div>
+						  
+						  
+						</div>
+								
+								
+								
+								
+								
+								
+								
+								
+							</div> <!-- /widget-content -->
+							
+						</div> <!-- /widget -->
+						
+					</div> <!-- /span9 -->
+					
+				</div> <!-- /row -->
+
+			</div> <!-- /span9 -->
+			
+			
+			
+			
+			
+			
+			
+					<div class="row">
+					
+					
+								<div class="span9">
+				
+				<div class="widget">
+					
+					<div class="widget-header">
+								<h3>联调辅助工具</h3>
+						</div> <!-- /widget-header -->									
+					<div class="widget-content">
+						
+						<!-- <h4>查询.</h3> -->
+						<ol class="faq-list" style="text-align:left">
+							
+							<div class="center">
+									<h4><i class="icon-question-sign" style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;&nbsp;交易风控-如果中了规则后想关闭对应的规则，怎么办?</h3>
+									<p>首先打开地址 <a href = "http://172.25.62.234:8088/index" target="_blank">http://172.25.62.234:8088/index</a></p>
+									<p>可选择对应的环境：功能 or 闭环, 先进入lagonda进入，选择中规的时间范围，点击搜索。从查询的日志中查找，中规的关键字是rule hit      后面携带rule_name:的值(确认对应的riskId)。复制下来(如没有搜索到，可到bora，vanquish查询)</p>
+									   <p>访问<a href = "http://172.25.62.234/m_rule" target="_blank">http://172.25.62.234/m_rule</a>在规则列表里找到刚才复制的规则号，选择开启关闭。（注意：这里Key值保密，Key直接找李慧真要），点击提交即可</p>	
+							</div>
+							<br/>
+							
+							<div class="center">
+									<h4><i class="icon-question-sign" style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;&nbsp;交易风控-已知场景号，开启或关闭规则?</h4>
+									<p>访问<a href = "http://172.25.62.234/m_rule" target="_blank">http://172.25.62.234/m_rule</a> 在规则中查看对应 场景号 点击提交即可(成功或者失败可在返回结果里提示)</p>	
+									
+							</div>
+							<br/>
+							
+							<div class="center">
+								
+									<h4><i class="icon-question-sign" style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;&nbsp;交易风控-自助查询测试环境日志信息?</h4>
+									<p>打开<a href = "http://172.25.62.234:8088/index" target="_blank">http://172.25.62.234:8088/index</a>地址，找到对应的应用名即可.</p>	
+							</div>
+							<br/>
+							
+							<div class="center">
+									<h4><i class="icon-question-sign" style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;&nbsp;交易风控-上游业务联调入库情况如何自助查询？</h4>
+									<p>直接输入<a href = "http://172.25.62.234/inputSql" target="_blank">http://172.25.62.234/inputSql</a>.进入后选择对应的测试环境，选择对应的库，输入SQL语句即可查询入库情况</p>	
+									
+							</div>
+							<br/>
+							
+							<div class="center">
+									<h4><i class="icon-question-sign" style="font-size:30px";></i>&nbsp;&nbsp;&nbsp;&nbsp;交易风控-设备指纹信息采集测试服务入口？</h4>
+									<p>直接访问地址<a href = "http://172.25.62.234/payrisk" target="_blank">http://172.25.62.234/payrisk</a>输入对应的erp账号即可提供测试设备信息</p>	
+									
+							</div>
+							<br/>
+							
+							<div class="center">
+									<h4><i class="icon-question-sign" style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;&nbsp;交易风控-如何对应的请求comm_jeep网关数据？</h4>
+									<p>输入网址<a href = "http://i.cbpmgt.com/" target="_blank">http://i.cbpmgt.com/</a>登录日志平台，在筛选框内输入对应的应用名称 例如：comm_jeep 搜索对应的场景号，获取到请求串后，可以通过<a href = "http://172.25.62.234/fk_request" target="_blank">http://172.25.62.234/fk_request</a>内部工具进行接口调用请求到对应的应用</p>	
+									
+							</div>
+							<br/>
+							
+							<div class="center">
+									<h4><i class="icon-question-sign" style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易风控-风控老运营平台访问地址</h4>
+									<p>老功能：http://172.24.5.186  如需访问请咚咚联系liangdongdong<br />
+									老闭环：http://172.24.4.19<br />
+									老预发：http://172.23.86.42<br /><br />
+									
+									新功能：http://172.24.5.51:9090<br />
+									新闭环：http://172.24.4.133<br />
+									新预发：http://boss-pre.cbpmgt.com</p>	
+									
+							</div>
+							
+						</ol>
+										
+					</div> <!-- /widget-content -->
+					
+				</div> <!-- /widget -->
+				
+				
+				
+			</div> <!-- /span9 -->
+					
+			<!-- 					<div class="span9">
+				
+						<div class="widget">
+							
+							<div class="widget-header">
+								<i class="icon-arrow-right"></i><h4>测试辅助系统导航</h3>
+							</div> 
+									
+							<div class="widget-content">
+								
+									<div class="row-fluid">
+										<div class="span3"><li><a href="http://10.13.40.55:8088/">浏览器访问 Linux 终端</a></li></div>
+										<div class="span3"><li><a href="http://172.25.62.234:8088/index">交易风控测试环境 日志系统</a></li></div>
+										<div class="span3"><li><a href="http://172.25.33.145/">浏览器兼容性测试平台</a></li></div>
+										</div>
+										<hr>			
+							</div> 
+							
+						</div>
+						
+					</div>  -->
+					
+														
+					
+					
+				</div> <!-- /widget -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div> <!-- /span9 -->
+			
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /content -->
+					
+<style>
+.center
+{
+margin:auto;
+width:100%;
+background-color:#F0F0F0;
+}
+</style>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript" src="./static/js/m.js"></script>
+
+
+
+
+<!-- <div id="footer" >
+	
+	<div class="container">				
+		<hr />
+		© 2017 Test platform 京东金融 - Test PlatForm 个人业务综合研发部
+	</div>
+	
+</div> -->
+
+</body>
+</html>
+

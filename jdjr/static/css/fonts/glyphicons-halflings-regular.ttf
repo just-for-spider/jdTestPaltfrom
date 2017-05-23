@@ -1,0 +1,15 @@
+Index: glyphicons-halflings-regular.ttf
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/octet-stream
+Index: glyphicons-halflings-regular.ttf
+===================================================================
+--- glyphicons-halflings-regular.ttf	(revision 0)
++++ glyphicons-halflings-regular.ttf	(revision 5)
+
+Property changes on: glyphicons-halflings-regular.ttf
+___________________________________________________________________
+Added: svn:mime-type
+## -0,0 +1 ##
++application/octet-stream
+\ No newline at end of property
